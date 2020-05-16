@@ -1,14 +1,21 @@
 "use strict";
 
+const numberOfFilms = +prompt("Cколько фильмов вы уже просмотрели?", "");
 
-// console.log(`http://someurl.com/${categorys}/5`); //интерполяция!
+const personalMovieDB = {
+    count: numberOfFilms,
+    movies: {},
+    actors: {},
+    genres: [],
+    privat: false
+};
 
-let incr = 10,
-    decr = 10;
+const a = prompt("Один из последних просмотренных фильмов?", ""),
+      b = prompt("На сколько оцените его?", ""),
+      c = prompt("Один из последних просмотренных фильмов?", ""),
+      d = prompt("На сколько оцените его?", "");
 
-incr++;
-decr--;
+personalMovieDB.movies[a] = b;
+personalMovieDB.movies[c] = d;
 
-console.log(incr + " " + decr);
-
-console.log(2 + 3 == 5 || 2 + 1 == 5);
+console.log(personalMovieDB);
